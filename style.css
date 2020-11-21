@@ -8,12 +8,15 @@ body{
   font-family: 'Courier New', Courier, monospace;
   font-style: oblique;
   font-size: medium;
+  /* background: url("assets/bgcocktail.jpg") no-repeat center center fixed; */
+  
+ 
 }
  .wrapper{
      width:100%;
      height:200px;
-     background-color: slategrey;
-     
+     /* background-color: slategrey; */
+     background: url("assets/bgcocktail.jpg") no-repeat center center fixed;
 
  }
     
@@ -26,7 +29,7 @@ body{
     left:50%;
     transform:translate(-50%, -50%);
     height:40px;
-    padding:10px;
+    padding:10px;    
     /*background-color: violet;*/
    }
 
@@ -109,4 +112,58 @@ header h1{
 }
 #links ul li a:active{
   color:lawngreen;
+}
+
+/* Landing section */
+
+#landing  h1 {    
+    text-align: center;
+}
+
+#landing h2 {
+    padding-left: 20px;
+}
+
+#landing li {
+    text-align: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+#landing button {    
+   float: right;
+   margin-right: 20px;
+}
+
+/* Restaurant near you section */
+
+.restNear {
+    text-align: center;
+}
+
+.home {
+    text-align: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+/* About section */
+
+.aboutSec {
+    text-align: center;
+}
+
+.home {
+    text-align: right;
+    list-style: none;
+    margin-right: 20px;
+}
+
+/* Team section */
+#ptag {
+    text-align: center;
+}
+
+.team {
+    text-align: center;
 }

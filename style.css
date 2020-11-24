@@ -9,21 +9,16 @@ body{
   font-style: oblique;
   font-size: medium;
   /* background: url("assets/bgcocktail.jpg") no-repeat center center fixed; */
-  
- 
 }
+
  .wrapper{
      width:100%;
-     height:200px;
+     height:400px;
      /* background-color: slategrey; */
-     background: url("assets/bgcocktail.jpg") no-repeat center center fixed;
-
- }
+     background: url("assets/bgcocktail.jpg") fixed;
+}
     
-
-
-
-   .search-box{
+.search-box{
        position: absolute;
     top:20%;
     left:50%;
@@ -33,21 +28,21 @@ body{
     /*background-color: violet;*/
    }
 
-    .input-box{
-        border:none;
+.input-box{
+   border:none;
         outline:none;
-        background:lightcoral;
+        background:rgb(245, 242, 242);
         float:left;
         color:#fff;
         font-size:16px;
         transition:0.4s all;
         line-height:40px;
-        width:0px;
+        width:0px;     
 
     }
 
    .btn{
-       color:#1abc9c;
+       color:#f0f5f4;
        float:right;
        width:40px;
        height:40px;
@@ -65,29 +60,34 @@ body{
    }
 
    .serach-box:hover .btn{
-       background-color:#fff;
+       background-color:rgb(255, 255, 255);
    }
-
    
-
-
 header{
     width:100%;
    padding:20px;
    position: fixed;
-   background-color:yellowgreen;
+   /*background-color:yellowgreen;*/
    display:flex;
    flex-wrap:wrap;
    justify-content: space-between;
       opacity:.90;
    
+    
+
+   
+
+
+
 }
 
 header h1{
-  color:green;
+  color:rgb(240, 247, 240);
   
 }
-
+h1 {
+  font-size: 50px;
+}
 
 #links{
   margin-right:20px;
@@ -101,7 +101,7 @@ header h1{
 
 #links ul li a{
   text-decoration: none;
-  color:green;
+  color:rgb(228, 240, 228);
   padding:45px;
   border-bottom: 0px solid cyan ;
   transition:border 120ms, padding 120ms;/*for smooth styling*/

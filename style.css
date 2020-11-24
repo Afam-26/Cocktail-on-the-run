@@ -33,7 +33,7 @@ body{
         outline:none;
         background:rgb(245, 242, 242);
         float:left;
-        color:#fff;
+        color:black;
         font-size:16px;
         transition:0.4s all;
         line-height:40px;
@@ -166,4 +166,11 @@ h1 {
 
 .team {
     text-align: center;
+}
+
+#printIngredients li{
+  color: red;
+  text-align: left;
+  margin-left: 3%;
+  margin-top: 1%;
 }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>Project1</title>
@@ -27,7 +28,7 @@
       </header>
 
       <div class="search-box">
-        <input class="input-box" type="text" name="" paceholder="search">
+        <input class="input-box" id="drink-input" type="text" name="" paceholder="search">
         <a  class="btn" href="#"><i class="fas fa-search"></i></a>
       </div>  
   
@@ -35,10 +36,10 @@
     </div>
 
     <section id="landing">     
-        <h1 id="drinkName">Drink Name</h1>
+        <h1 id="drinkName"></h1>
         <li class="home"><a href="#">Home</a></li>
-        <h2>Ingredents</h2>   
-        <ul>
+        <h2>Ingredients</h2>   
+        <ul id="printIngredients">
             
         </ul>
 
@@ -66,7 +67,11 @@
       <li class="home"><a href="#">Home</a></li>
 
     </div>
+  
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
 
 
 </body>

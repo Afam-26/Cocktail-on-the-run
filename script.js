@@ -1,3 +1,6 @@
+var latPos;
+var longPos;
+
 $(".btn").click(function(){
    
     var cocktail = document.getElementById("drink-input").value;
@@ -92,3 +95,48 @@ $.ajax(settings).done(function (response) {
 }
 
 fetch();
+
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocation is not supported by this browser.")
+  }
+}
+
+function showPosition(position) {
+  
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+
+  latPos = position.coords.latitude;
+  longPos = position.coords.longitude;
+
+  localStorage.setItem('latNum', latPos);
+  localStorage.setItem('longNum', longPos);
+
+}
+
+$(".findBtn").click(function(){
+   
+   getLocation();
+   const settings2 = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term=Bars&radius=15",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "0a0721062cmsh3c0bdb6d65699f6p1b3093jsn3d9eb4a7a857",
+		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
+	}
+};
+
+$.ajax(settings2).done(function (response) {
+	console.log(response);
+})
+
+});
+
+
+

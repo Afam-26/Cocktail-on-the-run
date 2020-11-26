@@ -1,176 +1,233 @@
 
+
 *{
-    box-sizing:border box;
-    margin:0;
-    padding:0;
-}
-body{
-  font-family: 'Courier New', Courier, monospace;
-  font-style: oblique;
-  font-size: medium;
-  /* background: url("assets/bgcocktail.jpg") no-repeat center center fixed; */
+  box-sizing:border box;
+  margin:0;
+  padding:0;
 }
 
- .wrapper{
-     width:100%;
-     height:400px;
-     /* background-color: slategrey; */
-     background: url("assets/bgcocktail.jpg") fixed;
+
+
+body{
+font-family: 'Courier New', Courier, monospace;
+font-style: oblique;
+font-size: medium;
+/* background: url("assets/bgcocktail.jpg") no-repeat center center fixed; */
 }
-    
+
+.wrapper{
+   width:100%;
+   height:400px;
+   /* background-color: slategrey; */
+   background: url("assets/bgcocktail.jpg") fixed;
+}
+  
 .search-box{
-       position: absolute;
-    top:20%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    height:40px;
-    padding:10px;    
-    /*background-color: violet;*/
-   }
+     position: absolute;
+  top:20%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  height:40px;
+  padding:10px;    
+  /*background-color: violet;*/
+ }
+
+
+
 
 .input-box{
-   border:none;
-        outline:none;
-        background:rgb(245, 242, 242);
-        float:left;
-        color:black;
-        font-size:16px;
-        transition:0.4s all;
-        line-height:40px;
-        width:0px;     
+ border:none;
+      outline:none;
+      background:rgb(245, 242, 242);
+      float:left;
+      color:black;
+      font-size:16px;
+      transition:0.4s all;
+      line-height:40px;
+      width:0px;     
 
-    }
+  }
 
-   .btn{
-       color:#f0f5f4;
-       float:right;
-       width:40px;
-       height:40px;
-       line-height:40px;
-       text-align:center;
-       border-radius:50%;
+ .btn{
+     color:#f0f5f4;
+     float:right;
+     width:40px;
+     height:40px;
+     line-height:40px;
+     text-align:center;
+     border-radius:50%;
 
-   }
+ }
 
-   .search-box:hover .input-box{
-     width:240px;
-     padding:0 6px;
+ .search-box:hover .input-box{
+   width:240px;
+   padding:0 6px;
 
 
-   }
+ }
 
-   .serach-box:hover .btn{
-       background-color:rgb(255, 255, 255);
-   }
-   
+ .serach-box:hover .btn{
+     background-color:rgb(255, 255, 255);
+ }
+ 
 header{
-    width:100%;
-   padding:20px;
-   position: fixed;
-   /*background-color:yellowgreen;*/
-   display:flex;
-   flex-wrap:wrap;
-   justify-content: space-between;
-      opacity:.90;
-   
-    
-
-   
-
-
-
+  width:100%;
+ padding:20px;
+ position: fixed;
+ /*background-color:yellowgreen;*/
+ display:flex;
+ flex-wrap:wrap;
+ justify-content: space-between;
+opacity:.90;
 }
 
 header h1{
-  color:rgb(240, 247, 240);
-  
+color:rgb(240, 247, 240);
+
 }
 h1 {
-  font-size: 50px;
+font-size: 50px;
 }
 
 #links{
-  margin-right:20px;
+margin-right:20px;
 }
 
 #links ul li{
-  display:inline-block;
-  text-transform: uppercase;
-  font-weight: 900;
+display:inline-block;
+text-transform: uppercase;
+font-weight: 900;
 }
 
 #links ul li a{
-  text-decoration: none;
-  color:rgb(228, 240, 228);
-  padding:45px;
-  border-bottom: 0px solid cyan ;
-  transition:border 120ms, padding 120ms;/*for smooth styling*/
+text-decoration: none;
+color:rgb(228, 240, 228);
+padding:45px;
+border-bottom: 0px solid cyan ;
+transition:border 120ms, padding 120ms;/*for smooth styling*/
 }
 #links ul li a:hover{
-  border-bottom: 3px solid hotpink;
-  padding-bottom:25px;
+border-bottom: 3px solid hotpink;
+padding-bottom:25px;
 }
 #links ul li a:active{
-  color:lawngreen;
+color:lawngreen;
 }
 
 /* Landing section */
 
-#landing  h1 {    
-    text-align: center;
+#landing {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 #landing h2 {
-    padding-left: 20px;
+/*  padding-left: 20px;  */
 }
 
 #landing li {
-    text-align: right;
-    list-style: none;
-    margin-right: 20px;
+ /* text-align: right; */
+  list-style: none; 
 }
 
-#landing button {    
-   float: right;
-   margin-right: 20px;
-}
+/*#landing button {    
+ /*float: right;*/
+/* margin-left:*/ 
+/* border-radius: 5px;*/
+
+/* margin-left:70%;*/
+
+
+
+
 
 /* Restaurant near you section */
 
+
+
+
 .restNear {
-    text-align: center;
+  text-align: center;
 }
 
-.home {
-    text-align: right;
-    list-style: none;
-    margin-right: 20px;
+/*.home {
+  text-align: right;
+  list-style: none;
+  margin-right: 20px;
+}*/
+
+#findBtnEl{
+justify-content: center;
+margin-left:15px;
+}
+
+
+
+/* DRINK DETAILS */
+#drink-details {
+display: flex;
+justify-content: space-evenly;
+
+}
+
+
+/* INGREDIENTS SECTION */
+#ingredients-section {
+display: flex; 
+flex-direction: column;
+justify-content: flex-start;
+padding: 5px;
+margin: 10px;
+}
+
+#print-ingredients {
+padding: 10px;
+}
+
+/* INSTRUCTIONS SECTION */
+#instructions-header {
+display: flex;
+display: row;
+justify-content: space-between;
+align-items: flex-end;
+padding: 5px;
+margin: 10px;
+
+}
+
+#print-instructions {
+padding: 15px;
+
 }
 
 /* About section */
 
 .aboutSec {
-    text-align: center;
+  text-align: center;
 }
 
 .home {
-    text-align: right;
-    list-style: none;
-    margin-right: 20px;
+  text-align: right;
+  list-style: none;
+  margin-right: 20px;
 }
 
 /* Team section */
 #ptag {
-    text-align: center;
+  text-align: center;
 }
 
 .team {
-    text-align: center;
+  text-align: center;
 }
 
-#printIngredients li{
-  color: red;
-  text-align: left;
-  margin-left: 3%;
-  margin-top: 1%;
+
+
+
+h3{
+/*  margin-left:30%;*/
+font-size: x-large;
 }
+

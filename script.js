@@ -81,6 +81,9 @@ const settings = {
         if (data.drinks[0].strIngredient15 != null){
             $("#printIngredients").append('<li>'+ data.drinks[0].strIngredient15 +'</li>');
         }
+        if(data.drinks[0].strInstructions!=null){
+            $("#printInstructions").append('<p>' + data.drinks[0].strInstructions + '</p>');
+        }
 
 
     }

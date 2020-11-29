@@ -12,6 +12,7 @@ body{
 font-family: 'Courier New', Courier, monospace;
 font-style: oblique;
 font-size: medium;
+background: lightgray;
 /* background: url("assets/bgcocktail.jpg") no-repeat center center fixed; */
 }
 
@@ -115,6 +116,8 @@ padding-bottom:25px;
 color:lawngreen;
 }
 
+/******End of header section****/
+
 /* Landing section */
 
 #landing {
@@ -126,10 +129,10 @@ align-items: center;
 
 h1{
   color:dodgerblue;
+  margin-top: 5px;
 }
 
 #landing h2 {
-/*  padding-left: 20px;  */
 color:dodgerblue;
 }
 
@@ -150,14 +153,25 @@ color:dodgerblue;
 
 
 
-/* Restaurant near you section */
+/************* Restaurant near you section ************/
 
 
 
 
 .restNear {
   text-align: center;
+  color:dodgerblue;
+  font-weight: bold;
+  font-size: x-large;
 }
+
+/*#nearRest{
+  list-style: none;
+  text-decoration: none;
+  text-align:center;
+  font-weight:bold;
+  color:rgb(62, 62, 110);
+}*/
 
 /*/*.home {
  /* text-align: right;*/
@@ -178,10 +192,11 @@ background:lightsteelblue;
 
 
 
-/* DRINK DETAILS */
+/********* DRINK DETAILS **********/
 #drink-details {
 display: flex;
 justify-content: space-evenly;
+
 
 }
 
@@ -222,20 +237,21 @@ text-align:justify;
 
 }
 
-/* About section */
+/********** About section ***********/
 
 .aboutSec {
   text-align: center;
+  margin-bottom: 3px;
 }
 
-.home {
+/*.home {
   text-align: right;
   list-style: none;
   margin-right: 20px;
   
-}
+/*}*/
 
-/* Team section */
+/*********** Team section **********/
 #ptag {
   text-align: center;
   color:rgb(45, 112, 171);
@@ -255,9 +271,6 @@ font-size: x-large;
 color:dodgerblue;
 }
 
-
-
-/**************Team section************/
 
 .team-container{
   display:flex;
@@ -297,6 +310,7 @@ color:dodgerblue;
   text-decoration: none;
   list-style: none;
   font-weight: bold;
+  color:blueviolet;
   
 }
 

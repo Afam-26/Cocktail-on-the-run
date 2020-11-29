@@ -89,10 +89,16 @@ const settings = {
         }
 
 
-    }
-};
+    },
 
-$.ajax(settings).done(function (response) {
+    error: function(){
+
+                console.log("Sorry");
+            }, 
+
+}
+
+$.ajax(settings).done(function(response) {
 	console.log(response);
 });
 }
@@ -127,12 +133,18 @@ $(".findBtn").click(function(){
    const settings2 = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term=Bars&radius=15",
+	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term="+ localStorage.getItem('searchDrink') + "&radius=15",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "0a0721062cmsh3c0bdb6d65699f6p1b3093jsn3d9eb4a7a857",
+		"x-rapidapi-key": "70be205ed9msh919485d05891a53p13e9b3jsncfe1258aafc7",
 		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
-	}
+    },
+    
+    success:function(data){
+        for(var i = 0; i < 6; i++){
+            $("#nearRest").append('<a href="' + data.business_search_results[i].business.url + '" target="_blank"><li>'+ data.business_search_results[i].business.android_app_annotation.annotation_title +'</li></a>');
+        }
+    }
 };
 
 $.ajax(settings2).done(function (response) {
@@ -140,6 +152,8 @@ $.ajax(settings2).done(function (response) {
 })
 
 });
+
+
 
 
 

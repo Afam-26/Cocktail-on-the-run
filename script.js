@@ -136,7 +136,7 @@ $(".findBtn").click(function(){
 	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term="+ localStorage.getItem('searchDrink') + "&radius=15",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "70be205ed9msh919485d05891a53p13e9b3jsncfe1258aafc7",
+		"x-rapidapi-key": "77b4b67964msh3bde941bf94ffe5p117d29jsne1ec0ad8b709",
 		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
     },
     

@@ -25,7 +25,7 @@ to my **location**
 
 
 ## The following image shows the functionality of the application
-[Coctail-on-the-run-demo]()
+![Coctail-on-the-run-demo]()
 
 
 ## Output

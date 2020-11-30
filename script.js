@@ -23,7 +23,12 @@ const settings = {
     
     success:function(data){
 
-        document.getElementById("drinkName").innerHTML = data.drinks[0].strDrink;
+        if(data.drinks == null){
+            document.getElementById("drinkName").innerHTML = "Drink does not seem to exist. Please try again!";
+        }
+
+        else{
+            document.getElementById("drinkName").innerHTML = data.drinks[0].strDrink;
 
         if (data.drinks[0].strIngredient1 != null){
             $("#printIngredients").append('<li>'+ data.drinks[0].strIngredient1 +'</li>');
@@ -87,6 +92,7 @@ const settings = {
         if(data.drinks[0].strInstructions!=null){
             $("#printInstructions").append('<p>' + data.drinks[0].strInstructions + '</p>');
         }
+        }
 
 
     },
@@ -94,14 +100,14 @@ const settings = {
     error: function(){
 
                 console.log("Sorry");
-            }, 
+    }
 
-}
+};
 
 $.ajax(settings).done(function(response) {
 	console.log(response);
-});
-}
+})
+};
 
 fetch();
 
@@ -136,7 +142,7 @@ $(".findBtn").click(function(){
 	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term="+ localStorage.getItem('searchDrink') + "&radius=15",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "77b4b67964msh3bde941bf94ffe5p117d29jsne1ec0ad8b709",
+		"x-rapidapi-key": "1c3366a160mshfe422dda179d253p1a37c0jsnf0ef6bb35b7f",
 		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
     },
     
@@ -144,6 +150,10 @@ $(".findBtn").click(function(){
         for(var i = 0; i < 6; i++){
             $("#nearRest").append('<a href="' + data.business_search_results[i].business.url + '" target="_blank"><li>'+ data.business_search_results[i].business.android_app_annotation.annotation_title +'</li></a>');
         }
+    },
+
+    error:function(){
+        $("#nearRest").append('<a href="https://www.yelp.com/" target="_blank"><li>' + "Click here to find these cocktails near you!" + '</li></a>');
     }
 };
 

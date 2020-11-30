@@ -165,20 +165,20 @@ color:dodgerblue;
   font-size: x-large;
 }
 
-/*#nearRest{
+#nearRest{
   list-style: none;
   text-decoration: none;
   text-align:center;
   font-weight:bold;
   color:rgb(62, 62, 110);
-}*/
+}
 
-/*/*.home {
- /* text-align: right;*/
-  /*list-style: none;
+.home {
+  text-align: right;
+  list-style: none;
   text-decoration: none;
- /* margin-right: 20px;*/
-/*}*/
+ margin-right: 20px;
+}
 
 #findBtnEl{
 justify-content: center;

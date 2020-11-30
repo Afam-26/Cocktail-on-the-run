@@ -2,16 +2,16 @@
 
 
 # User Story
-As a user,can enter **Cocktail Name** 
+As a user, you can enter **Cocktail Name** 
 
-And as a result,get the **Ingredients** and **Instructions**
+And as a result, you get the **Ingredients** and **Instructions**
 shown on web-page with the nearest **Bars**.
 
 # Acceptance Criteria
 
 Given a **Cocktail-Website** with **Search-Box**
 
-When I entered any **Cocktail-Naame** in the ssearch-box
+When I enter any **Cocktail-Name** in the ssearch-box
 
 Then I am presented with **Ingredients** and **Instructions**
 
@@ -24,8 +24,12 @@ get the recommendations of **nearest Bars** according
 to my **location**
 
 
-## The following image shows the functionality of the application
-![Coctail-on-the-run-demo]()
+## The following images shows the functionality of the application
+![Coctail-on-the-run-demo](./assets/cocktail.png)
+
+![Ingredients and Instruction](./assets/ingredients.png)
+
+![Team members](./assets/team.png)
 
 
 ## Output

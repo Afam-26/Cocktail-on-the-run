@@ -130,7 +130,7 @@ $(".findBtn").click(function(){
 	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term=Bars&radius=15",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "0a0721062cmsh3c0bdb6d65699f6p1b3093jsn3d9eb4a7a857",
+		"x-rapidapi-key": "2340f391demsh1c7c6f965203d0dp1480dejsncddd010801ad",
 		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
 	}
 };

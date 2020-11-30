@@ -90,7 +90,7 @@ with the use of **Two** **API**.
 
 [Github-repo](https://github.com/Afam-26/Cocktail-on-the-run)
 
-[Githun-Deployed-Application](https://afam-26.github.io/Cocktail-on-the-run/)
+[Github-Deployed-Application](https://afam-26.github.io/Cocktail-on-the-run/)
 
 
 

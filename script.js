@@ -1,5 +1,6 @@
 var latPos;
 var longPos;
+var cityLocation;
 
 $(".btn").click(function(){
    
@@ -29,6 +30,7 @@ const settings = {
 
         else{
             document.getElementById("drinkName").innerHTML = data.drinks[0].strDrink;
+            localStorage.setItem('drinkMenu', data.drinks[0].strDrink);
 
         if (data.drinks[0].strIngredient1 != null){
             $("#printIngredients").append('<li>'+ data.drinks[0].strIngredient1 +'</li>');
@@ -112,44 +114,28 @@ $.ajax(settings).done(function(response) {
 fetch();
 
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    alert("Geolocation is not supported by this browser.")
-  }
-}
-
-function showPosition(position) {
-  
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-
-  latPos = position.coords.latitude;
-  longPos = position.coords.longitude;
-
-  localStorage.setItem('latNum', latPos);
-  localStorage.setItem('longNum', longPos);
-
-}
-
 $(".findBtn").click(function(){
    
-   getLocation();
    const settings2 = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://yelp-com.p.rapidapi.com/search/nearby/" + localStorage.getItem('latNum') + "/" + localStorage.getItem('longNum') + "?offset=0&term="+ localStorage.getItem('searchDrink') + "&radius=15",
+	"url": "https://google-search3.p.rapidapi.com/api/v1/search/q=" + localStorage.getItem('drinkMenu') + "+near+"+ localStorage.getItem('citySpot') +"&num=100",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "1c3366a160mshfe422dda179d253p1a37c0jsnf0ef6bb35b7f",
-		"x-rapidapi-host": "yelp-com.p.rapidapi.com"
-    },
+		"x-rapidapi-key": "ac2a29a2dfmsh23cb80d77f48976p103e23jsn6c79ec0e8065",
+		"x-rapidapi-host": "google-search3.p.rapidapi.com"
+	},
     
     success:function(data){
-        for(var i = 0; i < 6; i++){
-            $("#nearRest").append('<a href="' + data.business_search_results[i].business.url + '" target="_blank"><li>'+ data.business_search_results[i].business.android_app_annotation.annotation_title +'</li></a>');
+        for(var i = 0; i < 5; i++){
+            $("#nearRest").append('<a href="' + data.results[i].link + '" target="_blank"><li>'+ data.results[i].title +'</li></a>');
         }
+
+        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=ae46d8ccddf746e9822ca1f7be226347&ip_address=2600:1702:38d0:63c0::27", function(data) {
+            console.log(data);
+            localStorage.setItem('citySpot', data.city);
+        })
+        
     },
 
     error:function(){
@@ -162,6 +148,7 @@ $.ajax(settings2).done(function (response) {
 })
 
 });
+
 
 
 

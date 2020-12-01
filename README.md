@@ -73,7 +73,9 @@ with the use of **Two** **API**.
 
 [Coctail-API](https://www.thecocktaildb.com)
 
-[Yelp-API]("https://yelp-com.p.rapidapi.com)
+[Google-API](https://rapidapi.com/apigeek/api/google-search3)
+
+[Abstract-API](https://app.abstractapi.com/#/)
 
 
 ## Resources Reffered

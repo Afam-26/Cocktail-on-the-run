@@ -131,10 +131,12 @@ $(".findBtn").click(function(){
             $("#nearRest").append('<a href="' + data.results[i].link + '" target="_blank"><li>'+ data.results[i].title +'</li></a>');
         }
 
-        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=ae46d8ccddf746e9822ca1f7be226347&ip_address=2600:1702:38d0:63c0::27", function(data) {
-            console.log(data);
-            localStorage.setItem('citySpot', data.city);
+        $.getJSON("https://ipgeolocation.abstractapi.com/v1/?api_key=ae46d8ccddf746e9822ca1f7be226347", function(data) {
+       console.log(data.ip_address);
+       console.log(data);
+       localStorage.setItem('citySpot', data.city);
         })
+
         
     },
 
